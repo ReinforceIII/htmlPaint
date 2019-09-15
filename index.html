@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HTML Paint</title>
+
+<script type="text/javascript" src="paint.js"></script>
+
+</head>
+<body onload="InitEvent()">
+<table>
+	<tr>
+		<td>
+	 	 <div id="container" style="position: relative;">
+	 	 <canvas id="drawCanvas" width="500" height="500" style="position: relative; border: 1px solid #000000;"></canvas>
+	 	 <canvas id="bufferCanvas" width="500" height="500" style="position: absolute; top: 1px; left: 1px;"></canvas>
+	 	 
+		<div>
+		<Button onclick="selectPencil()" checked> 펜 <br/>
+		<Button onclick="selectLine()"> 선 <br/>
+		<Button onclick="selectRectangle()"> 사각형 <br/>
+		<Button onclick="selectCircle()"> 원 <br/>
+		<Button onclick="selectTriangle()"> 삼각형 <br/>
+		<Button onclick="selectEraser()"> 지우개 <br/>
+		<Button onclick="selectNew()">Clear</button><br/>
+		
+		선 굵기 선택 : 
+		<input type="radio" name="thick" onclick="setThick(1)" checked> 1pt
+		<input type="radio" name="thick" onclick="setThick(3)" > 3pt 
+		<input type="radio" name="thick" onclick="setThick(5)" > 5pt 
+		<input type="radio" name="thick" onclick="setThick(7)" > 7pt 
+		<input type="radio" name="thick" onclick="setThick(9)" > 9pt 
+		<br/>
+		
+		
+		<form name="form">
+		<input type="checkbox" name="fillobj" onclick="setfillobj()" disabled> 도형 색깔채우기 <br/>
+		</form>
+		</div>
+		</td>
+		
+		<td>
+		색깔 선택 : <br/>
+		<input type="radio" name="colors" onclick="setColor('black')" checked> Black <br/>
+		<input type="radio" name="colors" onclick="setColor('red')" > Red <br/>
+		<input type="radio" name="colors" onclick="setColor('blue')" > Blue <br/>
+		<input type="radio" name="colors" onclick="setColor('purple')" > Purple <br/>
+		<input type="radio" name="colors" onclick="setColor('yellow')" > Yellow <br/>
+		<input type="radio" name="colors" onclick="setColor('green')" > green <br/>
+		</td>
+	 
+	</tr>
+</table>
+
+</body>
+</html>
